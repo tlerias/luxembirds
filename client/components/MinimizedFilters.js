@@ -9,6 +9,7 @@ export default class MinimizedFilters extends React.Component {
     if (!this.props.filterBoxExpanded) {
       filterBoxComponent = (
         <Sticky givenClass="filterbox__container filterbox__container--minimized">
+          <button onClick={this.props.handleMinimize.bind(this.props.parent, true)}>Appear</button>
         </Sticky>);
     } else {
       filterBoxComponent = '';

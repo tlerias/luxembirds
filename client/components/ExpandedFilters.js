@@ -14,6 +14,7 @@ export default class ExpandedFilters extends React.Component {
           <Sticky givenClass="filterbox__container filterbox__container--expanded">
             <LocationMap />
             <HashtagSearch />
+            <button onClick={this.props.handleMinimize.bind(this.props.parent, false)}>Disappear</button>
           </Sticky>);
       } else {
       filterBoxComponent = '';

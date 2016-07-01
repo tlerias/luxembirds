@@ -25972,7 +25972,7 @@
 
 
 	// module
-	exports.push([module.id, ".nav {\n  position: fixed;\n  width: 100%;\n  height: 75px;\n  color: #FFF;\n  background-color: #111; }\n\n.header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.googleMap {\n  height: 400px;\n  width: 100%; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 500px;\n  top: 225px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: #FFF;\n    border-bottom: 1px solid #ccc; }\n  .filterbox__container--minimized {\n    height: 75px;\n    top: 150px;\n    box-sizing: border-box;\n    background-color: #111;\n    border: 1px solid #ccc; }\n\n/* Animations */\n.filterbox-enter {\n  opacity: 1;\n  transform-origin: top left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterbox-leave {\n  transform: translateY(-1000px);\n  -ms-transform: translateY(-1000px);\n  /* IE 9 */\n  -webkit-transform: translateY(-1000px);\n  /* Safari */\n  opacity: 0;\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-leave {\n  transform: translateY(-50px);\n  -ms-transform: translateY(-50px);\n  /* IE 9 */\n  -webkit-transform: translateY(-50px);\n  /* Safari */\n  -webkit-transition: all 4s ease-in-out;\n  -moz-transition: all 4s ease-in-out;\n  transition: all 4s ease-in-out; }\n\nbody {\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  background-color: #F2F2F2;\n  height: 3000px;\n  margin: 0;\n  padding-top: -75px; }\n", ""]);
+	exports.push([module.id, ".nav {\n  position: fixed;\n  width: 100%;\n  height: 75px;\n  color: #FFF;\n  background-color: #111; }\n\n.header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.googleMap {\n  position: relative;\n  height: 400px;\n  width: 100%;\n  overflow: hidden; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 500px;\n  top: 225px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: #FFF;\n    border-bottom: 1px solid #ccc; }\n  .filterbox__container--minimized {\n    height: 75px;\n    top: 150px;\n    box-sizing: border-box;\n    background-color: #111;\n    border: 1px solid #ccc; }\n\n/* Animations */\n.filterbox-enter {\n  opacity: 1;\n  transform-origin: top left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterbox-leave {\n  transform: translateY(-1000px);\n  -ms-transform: translateY(-1000px);\n  /* IE 9 */\n  -webkit-transform: translateY(-1000px);\n  /* Safari */\n  opacity: 0;\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-leave {\n  transform: translateY(-50px);\n  -ms-transform: translateY(-50px);\n  /* IE 9 */\n  -webkit-transform: translateY(-50px);\n  /* Safari */\n  -webkit-transition: all 4s ease-in-out;\n  -moz-transition: all 4s ease-in-out;\n  transition: all 4s ease-in-out; }\n\nbody {\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  background-color: #F2F2F2;\n  height: 3000px;\n  margin: 0;\n  padding-top: -75px; }\n", ""]);
 
 	// exports
 
@@ -28071,18 +28071,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.handleMinimize.bind(this, true) },
-	          'Appear'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.handleMinimize.bind(this, false) },
-	          'Disappear'
-	        ),
-	        _react2.default.createElement(_ExpandedFilters2.default, { filterBoxExpanded: this.state.filterBoxExpanded }),
-	        _react2.default.createElement(_MinimizedFilters2.default, { filterBoxExpanded: this.state.filterBoxExpanded })
+	        _react2.default.createElement(_ExpandedFilters2.default, { filterBoxExpanded: this.state.filterBoxExpanded, handleMinimize: this.handleMinimize, parent: this }),
+	        _react2.default.createElement(_MinimizedFilters2.default, { filterBoxExpanded: this.state.filterBoxExpanded, handleMinimize: this.handleMinimize, parent: this })
 	      );
 	    }
 	  }]);
@@ -28947,7 +28937,12 @@
 	          _Sticky2.default,
 	          { givenClass: 'filterbox__container filterbox__container--expanded' },
 	          _react2.default.createElement(_LocationMap2.default, null),
-	          _react2.default.createElement(_HashtagSearch2.default, null)
+	          _react2.default.createElement(_HashtagSearch2.default, null),
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: this.props.handleMinimize.bind(this.props.parent, false) },
+	            'Disappear'
+	          )
 	        );
 	      } else {
 	        filterBoxComponent = '';
@@ -29286,7 +29281,15 @@
 	    value: function render() {
 	      var filterBoxComponent;
 	      if (!this.props.filterBoxExpanded) {
-	        filterBoxComponent = _react2.default.createElement(_Sticky2.default, { givenClass: 'filterbox__container filterbox__container--minimized' });
+	        filterBoxComponent = _react2.default.createElement(
+	          _Sticky2.default,
+	          { givenClass: 'filterbox__container filterbox__container--minimized' },
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: this.props.handleMinimize.bind(this.props.parent, true) },
+	            'Appear'
+	          )
+	        );
 	      } else {
 	        filterBoxComponent = '';
 	      }

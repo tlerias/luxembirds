@@ -18,7 +18,7 @@ export default class Header extends React.Component {
   render() {
     return (
     	<div className="header__image--featured">
-    		<span className="header__title">The LuxemBirds</span>
+    		<span className="header__title">LuxemBird&#8226;ish</span>
     		<img src="http://desktopwallpapers.co/wp-content/uploads/2014/03/high-resolution-travel-wallpapers-2.jpg" />
     	</div>
     );

@@ -9,7 +9,6 @@ class Sticky extends React.Component {
       };
       // example how to bind object in React ES6
       this.handleScroll = this.handleScroll.bind(this)
-       console.log(props)
   }
 
   componentDidMount(){

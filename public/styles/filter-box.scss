@@ -1,0 +1,72 @@
+.filterbox__container {
+	width: 300px;
+	top: 150px;
+	right: 100px;
+	z-index: 3;
+
+	&--expanded {
+		height: 500px;
+		background-color: red;
+	}
+
+	&--minimized {
+		height: 100px;
+		background-color: blue;
+	}
+
+}
+
+/* Animations */
+
+.filterbox-enter {
+  max-height: 500px;
+  overflow: hidden;
+  -webkit-transition: max-height 4s ease-in-out;
+	-moz-transition: max-height 4s ease-in-out;
+	transition: max-height 4s ease-in-out;
+}
+
+.filterbox-enter.filterbox-enter-active {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.filterbox-leave {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 4s ease-in-out;
+	-moz-transition: max-height 4s ease-in-out;
+	transition: max-height 4s ease-in-out;
+}
+
+.filterbox-leave.filter-leave-active {
+  max-height: 0;
+  overflow: hidden;
+}
+
+
+.filterboxminimized-enter {
+  max-height: 500px;
+  overflow: hidden;
+  -webkit-transition: max-height 4s ease-in-out;
+	-moz-transition: max-height 4s ease-in-out;
+	transition: max-height 4s ease-in-out;
+}
+
+.filterboxminimized-enter.filterboxminimized-enter-active {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.filterboxminimized-leave {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 4s ease-in-out;
+	-moz-transition: max-height 4s ease-in-out;
+	transition: max-height 4s ease-in-out;
+}
+
+.filterboxminimized-leave.filterboxminimized-leave-active {
+  max-height: 0;
+  overflow: hidden;
+}

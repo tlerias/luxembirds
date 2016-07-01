@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
-import LocationMap from '../components/LocationMap';
+import FilterBox from './FilterBox';
 
 export default class Main extends React.Component {  
   render() {
     return ( 
     	<div>
     		<Header />
-    		<LocationMap />
+    		<FilterBox />
     		<div>Main App</div> 
     	</div>
     );

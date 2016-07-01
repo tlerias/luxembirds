@@ -23,6 +23,7 @@
     "babel-register": "^6.9.0",
     "express": "^4.14.0",
     "react": "^15.1.0",
+    "react-addons-css-transition-group": "^15.1.0",
     "react-dom": "^15.1.0",
     "webpack": "^1.13.1"
   },

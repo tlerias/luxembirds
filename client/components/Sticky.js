@@ -22,13 +22,11 @@ class Sticky extends React.Component {
 
   handleScroll() {
 
-    if (window.scrollY > 150) {
-      console.log("should lock");
+    if (window.pageYOffset > 150) {
       this.setState({
         scrollingLock: true
       });
-    } else if (window.scrollY < 150) {
-      console.log("not locked" );
+    } else if (window.pageYOffset < 150) {
       this.setState({
         scrollingLock: false
       });

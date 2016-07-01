@@ -25972,7 +25972,7 @@
 
 
 	// module
-	exports.push([module.id, ".header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 300px;\n  top: 150px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: red; }\n  .filterbox__container--minimized {\n    height: 100px;\n    background-color: blue; }\n\n/* Animations */\n.filterbox-enter {\n  max-height: 500px;\n  overflow: hidden;\n  -webkit-transition: max-height 4s ease-in-out;\n  -moz-transition: max-height 4s ease-in-out;\n  transition: max-height 4s ease-in-out; }\n\n.filterbox-enter.filterbox-enter-active {\n  max-height: 500px;\n  overflow: hidden; }\n\n.filterbox-leave {\n  max-height: 0;\n  overflow: hidden;\n  -webkit-transition: max-height 4s ease-in-out;\n  -moz-transition: max-height 4s ease-in-out;\n  transition: max-height 4s ease-in-out; }\n\n.filterbox-leave.filter-leave-active {\n  max-height: 0;\n  overflow: hidden; }\n\n.filterboxminimized-enter {\n  max-height: 500px;\n  overflow: hidden;\n  -webkit-transition: max-height 4s ease-in-out;\n  -moz-transition: max-height 4s ease-in-out;\n  transition: max-height 4s ease-in-out; }\n\n.filterboxminimized-enter.filterboxminimized-enter-active {\n  max-height: 500px;\n  overflow: hidden; }\n\n.filterboxminimized-leave {\n  max-height: 0;\n  overflow: hidden;\n  -webkit-transition: max-height 4s ease-in-out;\n  -moz-transition: max-height 4s ease-in-out;\n  transition: max-height 4s ease-in-out; }\n\n.filterboxminimized-leave.filterboxminimized-leave-active {\n  max-height: 0;\n  overflow: hidden; }\n\nbody {\n  height: 3000px; }\n", ""]);
+	exports.push([module.id, ".header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 300px;\n  top: 150px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: #FFF; }\n  .filterbox__container--minimized {\n    height: 100px;\n    background-color: red; }\n\n/* Animations */\n.filterbox-enter {\n  transform: scaleY(0.5);\n  transform-origin: top left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterbox-leave {\n  transform: scaleY(0.1);\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-enter {\n  transform: scaleY(0.5);\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-leave {\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\nbody {\n  height: 3000px; }\n", ""]);
 
 	// exports
 
@@ -28178,6 +28178,10 @@
 	    key: 'handleMinimize',
 	    value: function handleMinimize(visible) {
 	      this.setState({ filterBoxExpanded: visible });
+
+	      // hack to make sure that the boxes immediately appear when toggling
+	      window.scrollTo(null, window.pageYOffset + 1);
+	      window.scrollTo(null, window.pageYOffset - 1);
 	    }
 	  }, {
 	    key: 'render',

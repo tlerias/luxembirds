@@ -14,7 +14,11 @@ export default class FilterBox extends React.Component {
 
 
 	handleMinimize (visible) {
-  	this.setState({filterBoxExpanded: visible});	
+  	this.setState({filterBoxExpanded: visible});
+
+  	// hack to make sure that the boxes immediately appear when toggling
+  	window.scrollTo(null, window.pageYOffset + 1);	
+  	window.scrollTo(null, window.pageYOffset - 1);	
   }
 
   render() {

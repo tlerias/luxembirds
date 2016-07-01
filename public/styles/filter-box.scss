@@ -6,12 +6,12 @@
 
 	&--expanded {
 		height: 500px;
-		background-color: red;
+		background-color: $white;
 	}
 
 	&--minimized {
 		height: 100px;
-		background-color: blue;
+		background-color: red;
 	}
 
 }
@@ -19,54 +19,46 @@
 /* Animations */
 
 .filterbox-enter {
-  max-height: 500px;
-  overflow: hidden;
-  -webkit-transition: max-height 4s ease-in-out;
-	-moz-transition: max-height 4s ease-in-out;
-	transition: max-height 4s ease-in-out;
+	transform: scaleY(0.5);
+	transform-origin: top left;
+  -webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transition: all 2s ease-in-out;
 }
 
 .filterbox-enter.filterbox-enter-active {
-  max-height: 500px;
-  overflow: hidden;
 }
 
 .filterbox-leave {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 4s ease-in-out;
-	-moz-transition: max-height 4s ease-in-out;
-	transition: max-height 4s ease-in-out;
+	transform: scaleY(0.1);
+	transform-origin: bottom left;
+  -webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transition: all 2s ease-in-out;
 }
 
 .filterbox-leave.filter-leave-active {
-  max-height: 0;
-  overflow: hidden;
 }
 
 
 .filterboxminimized-enter {
-  max-height: 500px;
-  overflow: hidden;
-  -webkit-transition: max-height 4s ease-in-out;
-	-moz-transition: max-height 4s ease-in-out;
-	transition: max-height 4s ease-in-out;
+  transform: scaleY(0.5);
+	transform-origin: bottom left;
+  -webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transition: all 2s ease-in-out;
 }
 
 .filterboxminimized-enter.filterboxminimized-enter-active {
-  max-height: 500px;
-  overflow: hidden;
+
 }
 
 .filterboxminimized-leave {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 4s ease-in-out;
-	-moz-transition: max-height 4s ease-in-out;
-	transition: max-height 4s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transition: all 2s ease-in-out;
 }
 
 .filterboxminimized-leave.filterboxminimized-leave-active {
-  max-height: 0;
-  overflow: hidden;
+
 }

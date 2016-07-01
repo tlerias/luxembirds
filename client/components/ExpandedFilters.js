@@ -20,7 +20,7 @@ export default class ExpandedFilters extends React.Component {
     }
       
     return (
-      <ReactCSSTransitionGroup transitionName="filterbox" transitionEnterTimeout={100} transitionLeaveTimeout={300}>
+      <ReactCSSTransitionGroup transitionName="filterbox" transitionEnterTimeout={400} transitionLeaveTimeout={500}>
         {filterBoxComponent}
       </ReactCSSTransitionGroup>
     )

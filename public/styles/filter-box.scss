@@ -1,6 +1,6 @@
 .filterbox__container {
-	width: 300px;
-	top: 150px;
+	width: 500px;
+	top: 225px;
 	right: 100px;
 	z-index: 3;
 
@@ -10,8 +10,11 @@
 	}
 
 	&--minimized {
-		height: 100px;
-		background-color: red;
+		height: 75px;
+		top: 150px;
+		box-sizing: border-box;
+		background-color: $black;
+		border: 1px solid #ccc;
 	}
 
 }
@@ -19,7 +22,7 @@
 /* Animations */
 
 .filterbox-enter {
-	transform: scaleY(0.5);
+	opacity: 1;
 	transform-origin: top left;
   -webkit-transition: all 2s ease-in-out;
 	-moz-transition: all 2s ease-in-out;
@@ -30,7 +33,10 @@
 }
 
 .filterbox-leave {
-	transform: scaleY(0.1);
+	transform: translateY(-1000px);
+	-ms-transform: translateY(-1000px); /* IE 9 */
+  -webkit-transform: translateY(-1000px); /* Safari */
+	opacity: 0;
 	transform-origin: bottom left;
   -webkit-transition: all 2s ease-in-out;
 	-moz-transition: all 2s ease-in-out;
@@ -42,11 +48,7 @@
 
 
 .filterboxminimized-enter {
-  transform: scaleY(0.5);
-	transform-origin: bottom left;
-  -webkit-transition: all 2s ease-in-out;
-	-moz-transition: all 2s ease-in-out;
-	transition: all 2s ease-in-out;
+  
 }
 
 .filterboxminimized-enter.filterboxminimized-enter-active {
@@ -54,9 +56,12 @@
 }
 
 .filterboxminimized-leave {
-  -webkit-transition: all 2s ease-in-out;
-	-moz-transition: all 2s ease-in-out;
-	transition: all 2s ease-in-out;
+	transform: translateY(-50px);
+	-ms-transform: translateY(-50px); /* IE 9 */
+  -webkit-transform: translateY(-50px); /* Safari */
+  -webkit-transition: all 4s ease-in-out;
+	-moz-transition: all 4s ease-in-out;
+	transition: all 4s ease-in-out;
 }
 
 .filterboxminimized-leave.filterboxminimized-leave-active {

@@ -9,14 +9,13 @@ export default class MinimizedFilters extends React.Component {
     if (!this.props.filterBoxExpanded) {
       filterBoxComponent = (
         <Sticky givenClass="filterbox__container filterbox__container--minimized">
-          Small Container Here
         </Sticky>);
     } else {
       filterBoxComponent = '';
     }
       
     return (
-      <ReactCSSTransitionGroup transitionName="filterboxminimized" transitionEnterTimeout={300} transitionLeaveTimeout={100}>
+      <ReactCSSTransitionGroup transitionName="filterboxminimized" transitionEnterTimeout={700} transitionLeaveTimeout={500}>
         {filterBoxComponent}
       </ReactCSSTransitionGroup>
     )

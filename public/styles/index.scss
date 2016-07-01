@@ -1,11 +1,15 @@
 $white: #FFF;
+$black: #111;
 
-
+@import './nav';
 @import './header';
 @import './location-map';
 @import './sticky.scss';
 @import './filter-box.scss';
 
 body {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
 	height: 3000px; //to be deleted
+	margin: 0;
+	padding-top: -75px;
 }

@@ -1,0 +1,48 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Sticky extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        scrollingLock: false
+      };
+      // example how to bind object in React ES6
+      this.handleScroll = this.handleScroll.bind(this)
+       console.log(props)
+  }
+
+  componentDidMount(){
+      window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+
+    if (window.scrollY > 150) {
+      console.log("should lock");
+      this.setState({
+        scrollingLock: true
+      });
+    } else if (window.scrollY < 150) {
+      console.log("not locked" );
+      this.setState({
+        scrollingLock: false
+      });
+    }
+
+  }
+
+  render() {
+    return (
+      <div className={ (this.state.scrollingLock ? 'sticky__fixed' : 'sticky__default') + " " +this.props.givenClass}>
+        {this.props.children}
+      </div>
+    )
+  }
+}
+
+export default Sticky;

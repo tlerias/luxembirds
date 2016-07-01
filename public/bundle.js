@@ -25972,7 +25972,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.map__container {\n  height: 500px;\n  width: 300px;\n  top: 150px;\n  right: 100px;\n  z-index: 3;\n  background-color: red; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\nbody {\n  height: 3000px; }\n", ""]);
 
 	// exports
 
@@ -26319,9 +26319,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Nav = __webpack_require__(321);
+	var _Header = __webpack_require__(321);
 
-	var _Nav2 = _interopRequireDefault(_Nav);
+	var _Header2 = _interopRequireDefault(_Header);
+
+	var _LocationMap = __webpack_require__(322);
+
+	var _LocationMap2 = _interopRequireDefault(_LocationMap);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26339,7 +26343,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Nav2.default, null),
+	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(_LocationMap2.default, null),
 	        _react2.default.createElement(
 	          'div',
 	          null,
@@ -27917,28 +27922,205 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Nav = function (_React$Component) {
-	  (0, _inherits3.default)(Nav, _React$Component);
+	var Header = function (_React$Component) {
+	  (0, _inherits3.default)(Header, _React$Component);
 
-	  function Nav() {
-	    (0, _classCallCheck3.default)(this, Nav);
-	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Nav).apply(this, arguments));
+	  function Header() {
+	    (0, _classCallCheck3.default)(this, Header);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Header).apply(this, arguments));
 	  }
 
-	  (0, _createClass3.default)(Nav, [{
+	  (0, _createClass3.default)(Header, [{
+	    key: 'getDefaultProps',
+	    value: function getDefaultProps() {
+	      return {
+	        featuredHeaderImage: 'http://desktopwallpapers.co/wp-content/uploads/2014/03/high-resolution-travel-wallpapers-2.jpg'
+	      };
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        'Navigation'
+	        { className: 'header__image--featured' },
+	        _react2.default.createElement(
+	          'span',
+	          { className: 'header__title' },
+	          'The LuxemBirds'
+	        ),
+	        _react2.default.createElement('img', { src: 'http://desktopwallpapers.co/wp-content/uploads/2014/03/high-resolution-travel-wallpapers-2.jpg' })
 	      );
 	    }
 	  }]);
-	  return Nav;
+	  return Header;
 	}(_react2.default.Component);
 
-	exports.default = Nav;
+	exports.default = Header;
+
+/***/ },
+/* 322 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _getPrototypeOf = __webpack_require__(235);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(261);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(262);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(266);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(313);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Sticky = __webpack_require__(323);
+
+	var _Sticky2 = _interopRequireDefault(_Sticky);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var LocationMap = function (_React$Component) {
+	  (0, _inherits3.default)(LocationMap, _React$Component);
+
+	  function LocationMap() {
+	    (0, _classCallCheck3.default)(this, LocationMap);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(LocationMap).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(LocationMap, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _Sticky2.default,
+	        { givenClass: 'map__container' },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          'MAP!'
+	        )
+	      );
+	    }
+	  }]);
+	  return LocationMap;
+	}(_react2.default.Component);
+
+	exports.default = LocationMap;
+
+/***/ },
+/* 323 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _getPrototypeOf = __webpack_require__(235);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(261);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(262);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(266);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(313);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(100);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Sticky = function (_React$Component) {
+	  (0, _inherits3.default)(Sticky, _React$Component);
+
+	  function Sticky(props) {
+	    (0, _classCallCheck3.default)(this, Sticky);
+
+	    var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Sticky).call(this, props));
+
+	    _this.state = {
+	      scrollingLock: false
+	    };
+	    // example how to bind object in React ES6
+	    _this.handleScroll = _this.handleScroll.bind(_this);
+	    console.log(props);
+	    return _this;
+	  }
+
+	  (0, _createClass3.default)(Sticky, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'handleScroll',
+	    value: function handleScroll() {
+
+	      if (window.scrollY > 150) {
+	        console.log("should lock");
+	        this.setState({
+	          scrollingLock: true
+	        });
+	      } else if (window.scrollY < 150) {
+	        console.log("not locked");
+	        this.setState({
+	          scrollingLock: false
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: (this.state.scrollingLock ? 'sticky__fixed' : 'sticky__default') + " " + this.props.givenClass },
+	        this.props.children
+	      );
+	    }
+	  }]);
+	  return Sticky;
+	}(_react2.default.Component);
+
+	exports.default = Sticky;
 
 /***/ }
 /******/ ]);

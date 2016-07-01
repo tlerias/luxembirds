@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, Link } from 'react-router';
 import ReactDOM from 'react-dom';
 import '../public/styles/index.scss';
 

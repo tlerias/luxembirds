@@ -1,7 +1,11 @@
 import React from 'react';
+import { Router, Route, Link, browserHistory } from 'react-router';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
+import Main from './container/Main';
+
+ReactDOM.render((
+  <Router>
+    <Route path="/" component={ Main } />
+  </Router>
+), document.getElementById('root'));

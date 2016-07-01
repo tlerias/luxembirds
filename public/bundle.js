@@ -25972,7 +25972,7 @@
 
 
 	// module
-	exports.push([module.id, ".nav {\n  position: fixed;\n  width: 100%;\n  height: 75px;\n  color: #FFF;\n  background-color: #111; }\n\n.header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.googleMap {\n  position: relative;\n  height: 400px;\n  width: 100%;\n  overflow: hidden; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 500px;\n  top: 225px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: #FFF;\n    border-bottom: 1px solid #ccc; }\n  .filterbox__container--minimized {\n    height: 75px;\n    top: 150px;\n    box-sizing: border-box;\n    background-color: #111;\n    border: 1px solid #ccc; }\n\n/* Animations */\n.filterbox-enter {\n  opacity: 1;\n  transform-origin: top left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterbox-leave {\n  transform: translateY(-1000px);\n  -ms-transform: translateY(-1000px);\n  /* IE 9 */\n  -webkit-transform: translateY(-1000px);\n  /* Safari */\n  opacity: 0;\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-leave {\n  transform: translateY(-50px);\n  -ms-transform: translateY(-50px);\n  /* IE 9 */\n  -webkit-transform: translateY(-50px);\n  /* Safari */\n  -webkit-transition: all 4s ease-in-out;\n  -moz-transition: all 4s ease-in-out;\n  transition: all 4s ease-in-out; }\n\nbody {\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  background-color: #F2F2F2;\n  height: 3000px;\n  margin: 0;\n  padding-top: -75px; }\n", ""]);
+	exports.push([module.id, ".nav {\n  position: fixed;\n  width: 100%;\n  height: 75px;\n  color: #FFF;\n  background-color: #111; }\n  .nav__title {\n    display: block;\n    font-size: 30px;\n    margin: 20px 0 0 20px; }\n\n.header__image--featured {\n  height: 500px;\n  overflow: hidden; }\n\n.header__title {\n  position: absolute;\n  top: 100px;\n  left: 50px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  font-size: 75px;\n  z-index: 2; }\n\n.googleMap {\n  position: relative;\n  height: 400px;\n  width: 100%;\n  overflow: hidden; }\n\n.sticky__fixed {\n  position: fixed;\n  margin-top: -150px; }\n\n.sticky__default {\n  position: absolute; }\n\n.filterbox__container {\n  width: 500px;\n  top: 225px;\n  right: 100px;\n  z-index: 3; }\n  .filterbox__container--expanded {\n    height: 500px;\n    background-color: #FFF;\n    border-bottom: 1px solid #ccc; }\n  .filterbox__container--minimized {\n    height: 75px;\n    top: 150px;\n    box-sizing: border-box;\n    background-color: #111; }\n\n/* Animations */\n.filterbox-enter {\n  opacity: 1;\n  transform-origin: top left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterbox-leave {\n  transform: translateY(-1000px);\n  -ms-transform: translateY(-1000px);\n  /* IE 9 */\n  -webkit-transform: translateY(-1000px);\n  /* Safari */\n  opacity: 0;\n  transform-origin: bottom left;\n  -webkit-transition: all 2s ease-in-out;\n  -moz-transition: all 2s ease-in-out;\n  transition: all 2s ease-in-out; }\n\n.filterboxminimized-leave {\n  transform: translateY(-50px);\n  -ms-transform: translateY(-50px);\n  /* IE 9 */\n  -webkit-transform: translateY(-50px);\n  /* Safari */\n  -webkit-transition: all 4s ease-in-out;\n  -moz-transition: all 4s ease-in-out;\n  transition: all 4s ease-in-out; }\n\n.content {\n  height: 500px;\n  width: 100%;\n  margin: 25px;\n  padding: 25px;\n  background-color: #FFF; }\n  .content__title {\n    font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n    font-weight: unset; }\n\nbody {\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';\n  background-color: #F2F2F2;\n  height: 3000px;\n  margin: 0;\n  padding-top: -75px; }\n", ""]);
 
 	// exports
 
@@ -26331,6 +26331,14 @@
 
 	var _FilterBox2 = _interopRequireDefault(_FilterBox);
 
+	var _MainContent = __webpack_require__(356);
+
+	var _MainContent2 = _interopRequireDefault(_MainContent);
+
+	var _SubContent = __webpack_require__(357);
+
+	var _SubContent2 = _interopRequireDefault(_SubContent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Main = function (_React$Component) {
@@ -26342,7 +26350,15 @@
 	    var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(Main).call(this, props));
 
 	    _this.state = {
-	      navExpanded: false
+	      navExpanded: false,
+	      currentSearch: [{
+	        key: 1,
+	        title: 'Luxembourg'
+	      }, {
+	        key: 2,
+	        title: 'Europe'
+	      }]
+
 	    };
 	    // example how to bind object in React ES6
 	    _this.handleScroll = _this.handleScroll.bind(_this);
@@ -26382,11 +26398,8 @@
 	        _react2.default.createElement(_Nav2.default, { navExpanded: this.state.navExpanded }),
 	        _react2.default.createElement(_Header2.default, null),
 	        _react2.default.createElement(_FilterBox2.default, null),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          'Main App'
-	        )
+	        _react2.default.createElement(_MainContent2.default, { currentSearch: this.state.currentSearch }),
+	        _react2.default.createElement(_SubContent2.default, null)
 	      );
 	    }
 	  }]);
@@ -47168,7 +47181,7 @@
 /* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -47209,16 +47222,24 @@
 	  }
 
 	  (0, _createClass3.default)(Nav, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      var nav = void 0;
 	      if (this.props.navExpanded) {
-	        nav = _react2.default.createElement('div', { className: 'nav' });
+	        nav = _react2.default.createElement(
+	          "div",
+	          { className: "nav" },
+	          _react2.default.createElement(
+	            "span",
+	            { className: "nav__title" },
+	            "LuxemBird • ish"
+	          )
+	        );
 	      } else {
 	        nav = '';
 	      }
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        nav
 	      );
@@ -47228,6 +47249,136 @@
 	}(_react2.default.Component);
 
 	exports.default = Nav;
+
+/***/ },
+/* 356 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _getPrototypeOf = __webpack_require__(235);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(261);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(262);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(266);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(313);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(353);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var MainContent = function (_React$Component) {
+	  (0, _inherits3.default)(MainContent, _React$Component);
+
+	  function MainContent(props) {
+	    (0, _classCallCheck3.default)(this, MainContent);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(MainContent).call(this, props));
+	  }
+
+	  (0, _createClass3.default)(MainContent, [{
+	    key: 'render',
+	    value: function render() {
+	      console.log(this.props);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content' },
+	        _lodash2.default.map(this.props.currentSearch, function (searchItem) {
+	          return _react2.default.createElement(
+	            'h2',
+	            { className: 'content__title', key: searchItem.id },
+	            '#',
+	            searchItem.title
+	          );
+	        })
+	      );
+	    }
+	  }]);
+	  return MainContent;
+	}(_react2.default.Component);
+
+	exports.default = MainContent;
+
+/***/ },
+/* 357 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _getPrototypeOf = __webpack_require__(235);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(261);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(262);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(266);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(313);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SubContent = function (_React$Component) {
+	  (0, _inherits3.default)(SubContent, _React$Component);
+
+	  function SubContent() {
+	    (0, _classCallCheck3.default)(this, SubContent);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(SubContent).apply(this, arguments));
+	  }
+
+	  (0, _createClass3.default)(SubContent, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "content" },
+	        "Sub"
+	      );
+	    }
+	  }]);
+	  return SubContent;
+	}(_react2.default.Component);
+
+	exports.default = SubContent;
 
 /***/ }
 /******/ ]);

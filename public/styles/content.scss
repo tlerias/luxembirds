@@ -1,0 +1,12 @@
+.content {
+	height: 500px;
+	width: 100%;
+	margin: 25px;
+	padding: 25px;
+	background-color: $white;
+
+	&__title {
+		font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		font-weight: unset;
+	}
+}

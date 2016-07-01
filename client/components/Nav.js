@@ -5,7 +5,9 @@ export default class Nav extends React.Component {
   	let nav;
   	if (this.props.navExpanded) {
         nav =  (
-          <div className="nav"></div>
+          <div className="nav">
+          	<span className="nav__title">LuxemBird &#8226; ish</span>
+          </div>
          )
       } else {
       nav = '';
